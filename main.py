@@ -13,23 +13,21 @@ def iniciar_juego():
     while True:
         
         # 1. MOSTRAR LA "VISTA" AL USUARIO
-        # Usamos las funciones de logica.py para transformar los datos a texto
         print("\n" + "="*30)
         print(f"Vidas restantes: {vidas}")
         print(AHORCADO_DIBUJOS.get(vidas, "X"))
         print("Palabra: " + formatear_palabra_secreta(palabra_secreta, letras_adivinadas))
 
         # 2. VERIFICAR EL ESTADO DEL JUEGO
-        # Le preguntamos a nuestra función pura cómo está el juego
         estado = obtener_estado_juego(palabra_secreta, letras_adivinadas, vidas)
 
         if estado == 'GANO':
             print(f"\n¡Felicidades! Adivinaste la palabra: {palabra_secreta}")
-            break # Rompemos el ciclo while para terminar
+            break # Rompemos el ciclo while (se adivino la palabra)
         
         if estado == 'PERDIO':
             print(f"\n¡Game Over! La palabra era: {palabra_secreta}")
-            break # Rompemos el ciclo while para terminar
+            break # Rompemos el ciclo while (ya no hay vidas)
 
         # 3. ENTRADA DE DATOS (INPUT)
         intento = input("Adivina una letra: ").upper().strip()
@@ -41,7 +39,7 @@ def iniciar_juego():
 
         if intento in letras_adivinadas:
             print(f"Ya habías intentado con '{intento}'.")
-            continue # Saltamos al inicio del while
+            continue # Vuelve al inicio (la letra ingresada ya se usó)
 
         # 5. ACTUALIZACIÓN DEL ESTADO
         # Agregamos la letra al conjunto
@@ -49,7 +47,7 @@ def iniciar_juego():
 
         if intento not in palabra_secreta:
             print(f"¡Mala suerte! '{intento}' no está en la palabra.")
-            vidas -= 1 # Reducimos la vida (Mutación de estado, común en while)
+            vidas -= 1 # Reducimos la vida
         else:
             print(f"¡Bien hecho! '{intento}' es correcta.")
 

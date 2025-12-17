@@ -11,7 +11,6 @@ def formatear_palabra_secreta(palabra_secreta, letras_adivinadas):
     Mapea la palabra secreta a una cadena visible.
     Si la letra está en 'letras_adivinadas', la muestra. Si no, pone '_'.
     """
-    # List comprehension: Una forma muy 'funcional' de transformar listas
     letras_visibles = [letra if letra in letras_adivinadas else '_' for letra in palabra_secreta]
     return ' '.join(letras_visibles)
 

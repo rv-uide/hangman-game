@@ -2,7 +2,7 @@ import random
 
 def obtener_palabra_random(lista_palabras):
     """
-    Función Pura: Elige una palabra al azar.
+    Elige una palabra al azar.
     """
     return random.choice(lista_palabras).upper()
 

@@ -6,7 +6,7 @@ PALABRAS = ['PYTHON', 'PROGRAMACION', 'AHORCADO', 'JUEGO', 'INMUTABLE']
 AHORCADO_DIBUJOS = {
     6: "",
     5: " O",
-    4: " O\n|",
+    4: " O\n |",
     3: " O\n/|",
     2: " O\n/|\\",
     1: " O\n/|\\\n/",

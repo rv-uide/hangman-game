@@ -37,3 +37,12 @@ Asegúrate de tener Python instalado en tu computadora.
 
 ```bash
 python main.py
+```
+
+## Diagramas
+
+### Diagrama de Caso de Uso (Izq.) y Diagrama de Arquitectura (Der.)
+<img width="1185" height="630" alt="image" src="https://github.com/user-attachments/assets/b68733ed-214e-4cb6-b9a2-5e53844f67c3" />
+
+### Diagrama de Flujo
+<img width="1218" height="958" alt="image" src="https://github.com/user-attachments/assets/31027c9d-2b6d-4815-8352-b58b41a30294" />
